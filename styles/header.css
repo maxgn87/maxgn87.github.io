@@ -26,8 +26,9 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-
 }
+
+
 
 
 .call_back {
@@ -58,13 +59,15 @@
     font-weight: bold;
     font-size: 25px;
     margin-right: 28px;
-    transition: color .6s;
+    transition: color  .6s;
 }
+
+
+
 
 .phone:hover {
-    color: #ff4e2e;
+    color: #f82370;
 }
-
 
 
 
