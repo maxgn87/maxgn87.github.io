@@ -957,8 +957,8 @@
     .swiper-slide img {
         min-width: 90%;
     }
-    
-    
+
+
     .swipper-button {
         display: none;
     }
@@ -1125,9 +1125,9 @@
     .what-i-do .container {
         padding: 0 20px;
     }
-    
-    
-    
+
+
+
     .what-i-do__description {
         line-height: 1.5em;
         font-size: 15px;
@@ -1147,9 +1147,9 @@
     .swiper-slide img {
         min-width: 100%;
     }
-    
-    
-    
+
+
+
     .my-work__wrapper {
         width: 100%;
         text-align: center;
@@ -1921,7 +1921,7 @@
         margin-top: 40px;
     }
 
-    
+
     .what-i-do__icons {
         flex-direction: column;
         padding-top: 30px;
@@ -1929,10 +1929,10 @@
         align-items: center;
 
     }
-    
-    
-    
-    
+
+
+
+
 
     .what-i-do__icon img {
         width: 60px;
