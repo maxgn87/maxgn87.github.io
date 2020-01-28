@@ -64,9 +64,9 @@
                         <span></span>
                     </button>
                     <ul class="header-nav__menu">
-                        <li><a href="#service">Услуги</a></li>
-                        <li><a href="#work">Портфолио</a></li>
-                        <li><a href="#cost">Стоимость</a></li>
+                        <li class="header-nav__menu_list"><a class="header-nav__menu_link" href="#service">Услуги</a></li>
+                        <li class="header-nav__menu_list"><a class="header-nav__menu_link" href="#work">Портфолио</a></li>
+                        <li class="header-nav__menu_list"><a class="header-nav__menu_link" href="#cost">Стоимость</a></li>
                     </ul>
                 </nav>
                 <div class="header-nav__right-header">
@@ -82,12 +82,12 @@
             <section class="main-section">
                 <div class="container">
                     <div class="main-section__left_main_chapter">
-                        <div class="tegs">
-                            <span class="hooks">&#123; &#125;</span>
-                            <span class="div_first">&lt;div&gt;</span>
-                            <span class="sharp">#</span>
-                            <span class="arrows">&lt;/&gt;</span>
-                            <span class="div_second">&lt;div&gt;</span>
+                        <div class="main-section__tegs">
+                            <span class="hooks main-section___symbol">&#123; &#125;</span>
+                            <span class="div_first main-section___symbol">&lt;div&gt;</span>
+                            <span class="sharp main-section___symbol">#</span>
+                            <span class="arrows main-section___symbol">&lt;/&gt;</span>
+                            <span class="div_second main-section___symbol">&lt;div&gt;</span>
                         </div>
                         <h1 class="main-section__main-text">Дмитрий Алексеев</h1>
                         <p class="main-section__description-header">Frontend-разработчик и веб-верстальщик</p>
@@ -109,19 +109,19 @@
                     <h2 class="what-i-do__text">Что я делаю</h2>
                     <div class="what-i-do__icons">
                         <div class="what-i-do__icon first_icon">
-                            <img src="img/icons/first.png" alt="landing">
+                            <img class="what-i-do__icon_image" src="img/icons/first.png" alt="landing">
                             <p class="what-i-do__description">Верстка лендинг-страниц и сайтов любой сложности</p>
                         </div>
                         <div class="what-i-do__icon icons2">
-                            <img src="img/icons/second.png" alt="adaptive">
+                            <img class="what-i-do__icon_image" src="img/icons/second.png" alt="adaptive">
                             <p class="what-i-do__description">Адаптивная вёрстка под все браузеры и устройства</p>
                         </div>
                         <div class="what-i-do__icon">
-                            <img src="img/icons/third.png" alt="frontend">
+                            <img class="what-i-do__icon_image" src="img/icons/third.png" alt="frontend">
                             <p class="what-i-do__description">Frontend–разработка и программирование</p>
                         </div>
                         <div class="what-i-do__icon icons4">
-                            <img src="img/icons/four.png" alt="correction">
+                            <img class="what-i-do__icon_image" src="img/icons/four.png" alt="correction">
                             <p class="what-i-do__description">Исправление и доработка существующей вёрстки</p>
                         </div>
                     </div>
@@ -132,24 +132,22 @@
             </section>
 
 
-            <div class="my-work">
+            <section class="my-work">
                 <div class="container">
-                    <div class="my-work__select">
-                        <h2 id="work" class="my-work__select_choise">Примеры моих работ</h2>
-                    </div>
+                    <h2 id="work" class="my-work__select_choise">Примеры моих работ</h2>
 
                     <div class="my-work__wrapper">
                         <div class="swiper-button-prev swipper-button"></div>
                         <div class="swiper-button-next swipper-button"></div>
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img alt="psihology" src="img/slide/slider-image1.jpg.png">
+                                <div class="swiper-slide"><img class="swiper-slide__image" alt="psihology" src="img/slide/slider-image1.jpg.png">
                                     <p class="my-work__description">Сайт психолога Веры Антоновой</p>
                                 </div>
-                                <div class="swiper-slide"><img alt="kids_toys" src="img/slide/slider-image2.jpg.png">
+                                <div class="swiper-slide"><img class="swiper-slide__image" alt="kids_toys" src="img/slide/slider-image2.jpg.png">
                                     <p class="my-work__description">Сайт магазина детской одежды</p>
                                 </div>
-                                <div class="swiper-slide"><img alt="fish_shop" src="img/slide/slider-image3.jpg.png">
+                                <div class="swiper-slide"><img class="swiper-slide__image" alt="fish_shop" src="img/slide/slider-image3.jpg.png">
                                     <p class="my-work__description">Сайт магазина «Рыболов»</p>
                                 </div>
                             </div>
@@ -160,24 +158,24 @@
                         <button class="my-work__order_project more">Заказать проект</button>
                     </div>
                 </div>
-            </div>
+            </section>
 
 
 
             <section id="cost" class="price-block">
                 <div class="container">
                     <div class="price-block__tegs_main">
-                        <span class="hooks_adapt">&#123; &#125;</span>
-                        <span class="div_adapt">&#123; &#125;</span>
-                        <span class="sharp_adapt">#</span>
-                        <span class="arrows_adapt">&lt;/&gt;</span>
-                        <span class="div_second_adapt">&lt;div&gt;</span>
+                        <span class="hooks_adapt price-block__symbol">&#123; &#125;</span>
+                        <span class="div_adapt price-block__symbol">&#123; &#125;</span>
+                        <span class="sharp_adapt price-block__symbol">#</span>
+                        <span class="arrows_adapt price-block__symbol">&lt;/&gt;</span>
+                        <span class="div_second_adapt price-block__symbol">&lt;div&gt;</span>
                     </div>
 
                     <div class="price-block__text">
                         <h2 class="price-block__big_text">Адаптивная вёрстка под все устройства<br>
                             и браузеры от 1000 рублей всего за 4 часа.*</h2>
-                        <p class="price-block__description">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,<br> <span>в зависимости от сложности задач.</span></p>
+                        <p class="price-block__description">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,<br><span class="price-block__description_text">в зависимости от сложности задач.</span></p>
                     </div>
                 </div>
             </section>
@@ -200,18 +198,18 @@
                         </ul>
                     </nav>
                     <div class="footer_block__contacts">
-                        <a href="tel:+74999957755"> <i class="fas fa-phone-alt"></i></a> <a href="tel:+74999957755" class="phone_contacts">+7 (499) 995-77-55</a>
-                        <a href="mailto:dmitry@alekseev.com"><i class="fas fa-envelope-open"></i></a><a href="mailto:dmitry@alekseev.com" class="mail">dmitry@alekseev.com</a>
+                        <a href="tel:+74999957755" class="phone_contacts contacts_link"><i class="fas fa-phone-alt"></i>+7 (499) 995-77-55</a>
+                        <a href="mailto:dmitry@alekseev.com" class="mail contacts_link"><i class="fas fa-envelope-open"></i>dmitry@alekseev.com</a>
                     </div>
 
                     <div class="footer_block__social">
                         <button class="footer_social__btn__phone more">Заказать звонок</button>
                         <div class="footer_social__icons">
                             <ul>
-                                <li><a class="vk" href="https://vk.com"></a></li>
-                                <li><a class="fb" href="https://ru-ru.facebook.com"></a></li>
-                                <li><a class="tw" href="https://twitter.com/?lang=ru"></a></li>
-                                <li><a class="inst" href="https://www.instagram.com/?hl=ru"></a></li>
+                                <li class="footer_social__icons_list"><a class="vk social_media" href="https://vk.com"></a></li>
+                                <li class="footer_social__icons_list"><a class="fb social_media" href="https://ru-ru.facebook.com"></a></li>
+                                <li class="footer_social__icons_list"><a class="tw social_media" href="https://twitter.com/?lang=ru"></a></li>
+                                <li class="footer_social__icons_list"><a class="inst social_media" href="https://www.instagram.com/?hl=ru"></a></li>
                             </ul>
                         </div>
                     </div>

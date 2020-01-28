@@ -16,7 +16,7 @@
  var mySwiper = new Swiper('.swiper-container', {
      loop: true,
      slidesPerView: 3,
-     spaceBetween: 20,
+     spaceBetween: 10,
      navigation: {
          nextEl: '.swiper-button-next',
          prevEl: '.swiper-button-prev',
@@ -61,7 +61,7 @@
              spaceBetween: 20
          },
 
-         1170: {
+         1210: {
              slidesPerView: 3,
              spaceBetween: 20
          },
@@ -161,9 +161,9 @@
 
 
 
- $('.close_button').click(function () {
+ $('.close_button').click(function (event) {
 
-     $('.windows').fadeOut(2000);
+     $('.windows').hide();
 
  });
 
