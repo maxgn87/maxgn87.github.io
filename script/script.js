@@ -161,29 +161,16 @@
 
 
 
- $('.close_button').click(function (event) {
+ $('.close_menu').click(function (event) {
 
      $('.windows').hide();
+     event.preventDefault();
 
  });
 
 
  $(document).ready(function () {
-     $(".header-nav__menu").on("click", "a", function (event) {
-         event.preventDefault();
-         var id = $(this).attr('href'),
-             top = $(id).offset().top;
-         $('body,html').animate({
-             scrollTop: top
-         }, 1500);
-     });
- });
-
-
-
-
- $(document).ready(function () {
-     $(".footer_block__list").on("click", "a", function (event) {
+     $(".menu_list").on("click", "a", function (event) {
          event.preventDefault();
          var id = $(this).attr('href'),
              top = $(id).offset().top;
