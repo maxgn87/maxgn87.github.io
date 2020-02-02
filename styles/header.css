@@ -150,7 +150,7 @@
     margin-top: 20px;
     padding: 5px 5px;
     width: 60%;
-    background-color: blue;
+    background-color: #ff4e2e;
     color: white;
 }
 
@@ -223,7 +223,7 @@
     margin-top: 20px;
     padding: 5px 5px;
     width: 60%;
-    background-color: blue;
+    background-color: #ff4e2e;
     color: white;
 }
 
@@ -1434,6 +1434,7 @@
     }
 
     .call_back {
+        position: relative;
         display: inline-block;
         margin: 0;
         padding: 0;
@@ -1442,7 +1443,7 @@
         border: none;
         background-image: url('../img/mob_btn.png');
         background-repeat: no-repeat;
-        font-size: 0;    
+        font-size: 0;
     }
 
 
