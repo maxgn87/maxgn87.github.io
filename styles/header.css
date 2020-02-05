@@ -119,40 +119,82 @@
     right: 0;
     left: 0;
     margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border: 3px solid #ff4e2e;
+    width: 320px;
+    height: 280px;
     border: 3px solid #ff4e2e;
     text-align: center;
 }
 
-.window label {
+
+.window__field {
+    margin-top: 20px;
+}
+
+/*
+
+.window__error {
+ 	color: red;
+	text-align:left;
+	font-size: 12px;
+	display: block;
+	margin-top: 3px;
+	display: none;
+}
+*/
+
+
+.window__error {
     display: block;
-    padding: 10px;
-}
-
-
-.name,
-.email,
-.tel {
-    display: inline-block;
-    padding: 5px 5px;
-    outline: none;
-    border: 2px solid #f82370;
+    display: none;
+    margin-top: 3px;
+    color: red;
     text-align: center;
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 12px;
 }
 
+
+
+.window_name,
+.window_mail,
+.window_tel {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80%;
+    outline: none;
+    border: 1px solid red;
+    border-radius: 2px;
+}
+
+
+.window__field input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+.window__field input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+.window__field input:invalid:not(:placeholder-shown) + .window__error {
+    display: block;
+}
 
 .btn_sub {
+    /*    text-align: center;*/
     display: inline-block;
-    margin-top: 20px;
-    padding: 5px 5px;
-    width: 60%;
+    margin-top: 25px;
+    padding: 10px 0px;
+    width: 80%;
+    border: none;
     background-color: #ff4e2e;
     color: white;
+    transition: background-color .5s;
 }
+
+.btn_sub:hover {
+    background-color: #ff4e2e69;
+    cursor: pointer;
+}
+
 
 
 
@@ -167,8 +209,14 @@
     background-color: transparent;
     background-image: url(../img/closse_btn.png);
     background-repeat: no-repeat;
+    transition: opacity .6s;
 }
 
+
+.close_button_more:hover {
+    opacity: .4;
+    cursor: pointer;
+}
 
 /* Конец модального окна */
 
@@ -200,32 +248,21 @@
     text-align: center;
 }
 
-.window_new label {
+.window_new .window__field {
+    margin-top: 30px;
+}
+
+
+.window_new .window__error {
     display: block;
-    padding: 10px;
+    display: none;
+    margin: 0 auto;
+    margin-top: 3px;
+    width: 80%;
+    color: red;
+    font-size: 12px;
 }
 
-
-.name,
-.tel {
-    display: inline-block;
-    padding: 5px 5px;
-    outline: none;
-    border: 2px solid #f82370;
-    text-align: center;
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-
-.btn_sub {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 5px 5px;
-    width: 60%;
-    background-color: #ff4e2e;
-    color: white;
-}
 
 
 .close_button {
@@ -239,7 +276,18 @@
     background-color: transparent;
     background-image: url(../img/closse_btn.png);
     background-repeat: no-repeat;
+    transition: opacity .6s;
 }
+
+
+
+
+.close_button:hover {
+    opacity: .4;
+    cursor: pointer;
+}
+
+
 
 /* конец кнопки*/
 
@@ -320,9 +368,9 @@
         margin: 0;
         margin-top: 35px;
         padding: 0;
-        min-height: 200px;
+        /*        min-height: 200px;*/
         width: 100%;
-        height: 30vh;
+        /*        height: 30vh;*/
         background-color: white;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.3s;
@@ -347,7 +395,7 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 35px;
         font-weight: normal;
@@ -475,7 +523,7 @@
         visibility: hidden;
         overflow-y: scroll;
         margin: 0;
-        margin-top: 35px;
+        margin-top: 40px;
         padding: 0;
         min-height: 180px;
         width: 30%;
@@ -504,7 +552,7 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 35px;
         font-weight: normal;
@@ -635,7 +683,7 @@
         visibility: hidden;
         overflow-y: scroll;
         margin: 0;
-        margin-top: 35px;
+        margin-top: 40px;
         padding: 0;
         min-height: 180px;
         width: 30%;
@@ -664,7 +712,7 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 35px;
         font-weight: normal;
@@ -807,7 +855,7 @@
 
     .header-nav__menu {
         position: fixed;
-        top: 35px;
+        top: 40px;
         left: 0;
         z-index: 50;
         visibility: hidden;
@@ -815,9 +863,9 @@
         margin: 0;
         margin-top: 35px;
         padding: 0;
-        min-height: 200px;
-        width: 30%;
-        height: 30vh;
+        /*        min-height: 200px;*/
+        width: 100%;
+        /*        height: 30vh;*/
         background-color: white;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.3s;
@@ -842,11 +890,11 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 18px;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 18px;
     }
 
 
@@ -984,11 +1032,11 @@
         visibility: hidden;
         overflow-y: scroll;
         margin: 0;
-        margin-top: 35px;
+        margin-top: 40px;
         padding: 0;
-        min-height: 200px;
+        /*        min-height: 200px;*/
         width: 100%;
-        height: 30vh;
+        /*        height: 30vh;*/
         background-color: white;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.3s;
@@ -1013,7 +1061,7 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 18px;
         font-weight: normal;
@@ -1159,7 +1207,7 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 18px;
         font-weight: normal;
@@ -1314,11 +1362,11 @@
         visibility: hidden;
         overflow-y: scroll;
         margin: 0;
-        margin-top: 35px;
+        margin-top: 40px;
         padding: 0;
-        min-height: 200px;
+        /*        min-height: 200px;*/
         width: 100%;
-        height: 30vh;
+        /*        height: 30vh;*/
         background-color: white;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.3s;
@@ -1343,11 +1391,11 @@
     .header-nav__menu_link {
         display: block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 18px;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 16px;
     }
 
 
@@ -1490,9 +1538,9 @@
         margin: 0;
         margin-top: 35px;
         padding: 0;
-        min-height: 200px;
+        /*        min-height: 200px;*/
         width: 100%;
-        height: 30vh;
+        /*        height: 30vh;*/
         background-color: white;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.3s;
@@ -1517,7 +1565,7 @@
     .header-nav__menu_link {
         display: inline-block;
         margin: 0;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 18px;
         font-weight: normal;

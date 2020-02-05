@@ -1,14 +1,13 @@
  $(document).ready(function () {
-     //              document.addEventListener("DOMContentLoaded", () => {
-     $('.tegs').hide();
-     $('.tegs').show();
-     $('.tegs').addClass('fly_element')
+     $('.main-section__tegs').hide();
+     $('.main-section__tegs').show();
+     $('.main-section__tegs').addClass('fly_element')
      $('.main-section__right_photo').addClass('man_anim')
  });
 
  setTimeout(function () {
      $('.main-section__right_photo').addClass('man_anim_back')
-     $('.tegs').addClass('back_fly')
+     $('.main-section__tegs').addClass('back_fly')
  }, 2500);
 
 
@@ -32,33 +31,33 @@
 
          320: {
              slidesPerView: 1,
-             spaceBetween: 20
+
 
          },
          480: {
              slidesPerView: 2,
-             spaceBetween: 20
-         },
 
+         },
+         //
          640: {
              slidesPerView: 2,
-             spaceBetween: 20
+
          },
 
          800: {
              slidesPerView: 2,
-             spaceBetween: 20
+
          },
 
          900: {
              slidesPerView: 2,
-             spaceBetween: 20
+
          },
 
 
          1024: {
              slidesPerView: 2,
-             spaceBetween: 20
+
          },
 
          1210: {
@@ -178,4 +177,28 @@
              scrollTop: top
          }, 1500);
      });
+ });
+
+
+
+ $(document).ready(function () {
+
+     //E-mail Ajax Send
+     $("form").submit(function () { //Change
+         var th = $(this);
+         $.ajax({
+             type: "POST",
+             url: "mail.php", //Change
+             data: th.serialize()
+         }).done(function () {
+             alert("Спасибо! Ваша заявка отправлена!");
+             setTimeout(function () {
+                 // Done Functions
+                 th.trigger("reset");
+                 $('.windows').fadeOut(1200);
+             }, 2000);
+         });
+         return false;
+     });
+
  });

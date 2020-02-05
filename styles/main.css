@@ -17,24 +17,24 @@
 
 
 .fly_element {
-    transition: 3s linear;
+    transition: transform 3s linear;
     transform: translate(200px);
 }
 
 
 .back_fly {
-    transition: 4s ease;
+    transition: transform 4s ease;
     transform: translate(0px);
 }
 
 
 .man_anim {
-    transition: 2s ease;
+    transition: transform 2s ease;
     transform: translate(200px);
 }
 
 .man_anim_back {
-    transition: 3s ease;
+    transition: transform 3s ease;
     transform: translate(0px);
 }
 
