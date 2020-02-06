@@ -8,7 +8,7 @@
  setTimeout(function () {
      $('.main-section__right_photo').addClass('man_anim_back')
      $('.main-section__tegs').addClass('back_fly')
- }, 2500);
+ }, 2000);
 
 
 
@@ -203,19 +203,7 @@
 
 
          },
-         messages: {
-             Телефон: {
-                 required: 'Нужно что-то ввести'
-             },
-             Имя: {
-                 required: 'Нужно что-то ввести',
-                 maxlength: 'Нужно ввести максимум 10 букв'
-             },
-             Почта: {
-                 required: 'Нужно что-то ввести',
-                 maxlength: 'Нужно ввести максимум 10 букв'
-             },
-         },
+    
          submitHandler(form) {
              let th = $(form);
 
