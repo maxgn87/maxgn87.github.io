@@ -8,6 +8,28 @@
 }
 
 
+.top_btn {
+    width: 45px;
+    height: 45px;
+    background-image: url('../img/up-arrow.png');
+    position: fixed;
+    bottom: 85px;
+    background-repeat: no-repeat;
+    right: 10px;
+    background-size: 40px;
+    z-index: 60;
+    cursor: pointer;
+    display: none;
+    transform: rotate(-180deg);
+    transition: transform .5s ease;
+}
+
+
+.top_btn:hover {
+    transform: rotate(0deg);
+}
+
+
 
 .header-nav__menu_link {
     display: inline-block;
@@ -153,6 +175,12 @@
 }
 
 
+input:valid {
+    border: 1px solid green;
+    color: grey;
+}
+
+
 
 .window_name,
 .window_mail,
@@ -166,6 +194,11 @@
 }
 
 
+.error {
+    color: red;
+}
+
+/*
 .window__field input:valid:not(:placeholder-shown) {
     border-color: green;
 }
@@ -177,6 +210,7 @@
 .window__field input:invalid:not(:placeholder-shown) + .window__error {
     display: block;
 }
+*/
 
 .btn_sub {
     /*    text-align: center;*/

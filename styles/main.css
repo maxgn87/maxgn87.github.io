@@ -646,7 +646,8 @@
     }
 
     .price-block__big_text {
-        margin-left: 30px font-size: 45px;
+        margin-left: 30px;
+        font-size: 45px;
     }
 
     .price-block__text {
@@ -908,12 +909,17 @@
         display: none;
     }
 
+    .price-block__text {
+        padding: 20px;
+    }
+
     .price-block__big_text {
-        margin-left: 30px font-size: 35px;
+        margin-left: 30px;
+        font-size: 35px;
     }
 
     .price-block__text {
-        padding-top: 92px;
+        padding-top: 90px;
     }
 
     .price-block__description_text {
@@ -923,8 +929,9 @@
 
     .price-block__description {
         margin-left: 30px;
-        font-size: 18px;
+        font-size: 20px;
     }
+
 
 }
 
@@ -1157,13 +1164,13 @@
     }
 
     .price-block__big_text {
-        margin-left: 0;
-        margin-left: 104px;
+        margin-left: 20px;
         font-size: 28px;
     }
 
     .price-block__text {
-        /*        padding-top: 40px;*/
+        padding: 20px;
+        padding-top: 80px;
     }
 
     .price-block__description_text {
@@ -1172,10 +1179,8 @@
 
 
     .price-block__description {
-        margin-left: 100px;
-        text-align: left;
+        margin-left: 20px;
         font-size: 15px;
-        /*  Aside    */
     }
 
 }
@@ -1397,16 +1402,16 @@
 
     .price-block__big_text {
         margin: 0;
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .price-block__text {
         padding: 20px;
-        padding-top: 40px;
+        padding-top: 80px;
     }
 
-    .pprice-block__description_text {
-        padding: 0;
+    .price-block__description_text {
+        padding-left: 0;
     }
 
 
@@ -1628,7 +1633,7 @@
 
     .price-block__big_text {
         margin: 0;
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .price-block__text {
@@ -1644,7 +1649,6 @@
     .price-block__description {
         margin: 0;
         font-size: 15px;
-        /*  Aside    */
     }
 
 }

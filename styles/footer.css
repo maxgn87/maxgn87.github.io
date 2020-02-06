@@ -47,7 +47,7 @@
 .fa-phone-alt {
     position: absolute;
     top: 45%;
-    left: 35%;
+    left: 34.3%;
     color: green;
     color: #f82074;
     font-size: 20px;
@@ -63,7 +63,7 @@
 
 .fa-envelope-open {
     position: absolute;
-    top: 77%;
+    top: 79%;
     left: 34.6%;
     color: #f82074;
     font-size: 20px;
@@ -264,8 +264,8 @@
 
     .fa-phone-alt {
         position: absolute;
-        top: 44%;
-        left: 32%;
+        top: 45%;
+        left: 30%;
         color: green;
         color: #f82074;
         font-size: 16px;
@@ -273,8 +273,8 @@
 
     .fa-envelope-open {
         position: absolute;
-        top: 77%;
-        left: 32%;
+        top: 80%;
+        left: 30%;
         color: #f82074;
         font-size: 16px;
     }

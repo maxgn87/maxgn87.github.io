@@ -38,21 +38,6 @@
              slidesPerView: 2,
 
          },
-         //
-         640: {
-             slidesPerView: 2,
-
-         },
-
-         800: {
-             slidesPerView: 2,
-
-         },
-
-         900: {
-             slidesPerView: 2,
-
-         },
 
 
          1024: {
@@ -84,13 +69,13 @@
  });
 
 
- $('.window_container_new').click(function (event) {
-     if (event.target == this) {
-         $(this).fadeOut(1200);
-         $('.arrows').show();
-     }
-
- });
+ // $('.window_container_new').click(function (event) {
+ //     if (event.target == this) {
+ //         $(this).fadeOut(1200);
+ //         $('.arrows').show();
+ //     }
+ //
+ // });
 
 
 
@@ -151,12 +136,12 @@
  });
 
 
- $('.window_container').click(function (event) {
-     if (event.target == this) {
-         $(this).fadeOut(1300);
-     }
-
- });
+ // $('.window_container').click(function (event) {
+ //     if (event.target == this) {
+ //         $(this).fadeOut(1300);
+ //     }
+ //
+ // });
 
 
 
@@ -180,25 +165,101 @@
  });
 
 
-
  $(document).ready(function () {
 
-     //E-mail Ajax Send
-     $("form").submit(function () { //Change
-         var th = $(this);
-         $.ajax({
-             type: "POST",
-             url: "mail.php", //Change
-             data: th.serialize()
-         }).done(function () {
-             alert("Спасибо! Ваша заявка отправлена!");
-             setTimeout(function () {
-                 // Done Functions
-                 th.trigger("reset");
-                 $('.windows').fadeOut(1200);
-             }, 2000);
-         });
-         return false;
-     });
+     $('input[type="tel"]').inputmask({
+         "mask": "+7(999) 999-9999"
+     }); //specifying options    
+
+
 
  });
+
+
+
+ $('form').each(function () {
+     $(this).validate({
+         errorPlacement(error, element) {
+             return true;
+         },
+
+         focusInvalid: false,
+         rules: {
+             Телефон: {
+                 required: true,
+                 maxlength: 18,
+             },
+             Имя: {
+                 required: true,
+                 maxlength: 10,
+                 number: false,
+             },
+
+             Почта: {
+                 required: true,
+                 maxlength: 15,
+                 number: false,
+             },
+
+
+         },
+         messages: {
+             Телефон: {
+                 required: 'Нужно что-то ввести'
+             },
+             Имя: {
+                 required: 'Нужно что-то ввести',
+                 maxlength: 'Нужно ввести максимум 10 букв'
+             },
+             Почта: {
+                 required: 'Нужно что-то ввести',
+                 maxlength: 'Нужно ввести максимум 10 букв'
+             },
+         },
+         submitHandler(form) {
+             let th = $(form);
+
+             $.ajax({
+                 type: 'POST',
+                 url: 'mail.php',
+                 data: th.serialize(),
+                 // eslint-disable-next-line func-names
+             }).done(() => {
+
+                 alert("Спасибо! Ваша заявка отправлена!");
+                 setTimeout(function () {
+                     th.trigger('reset');
+                     $('.windows').fadeOut(1200);
+                 }, 2000);
+             });
+
+             return false;
+         }
+     });
+ });
+
+$(document).ready(function () {
+
+var top_show = 400; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+  var delay = 1000; // Задержка прокрутки
+  $(document).ready(function() {
+    $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+      /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+      if ($(this).scrollTop() > top_show) $('.top_btn').fadeIn();
+      else $('.top_btn').fadeOut();
+    });
+    $('.top_btn').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
+      /* Плавная прокрутка наверх */
+      $('body, html').animate({
+        scrollTop: 0
+      }, delay);
+    });
+  });
+
+});
+
+
+
+
+
+
