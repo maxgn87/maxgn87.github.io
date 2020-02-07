@@ -140,12 +140,12 @@
          $('.menu_burger__open').hide(2000);
 
          setTimeout(function () {
-            $('.menu_burger').removeClass('menu_burger__open')
-            $('.menu_burger').show();
+             $('.menu_burger').removeClass('menu_burger__open')
+             $('.menu_burger').show();
          }, 2800);
 
      });
-});
+ });
 
  $(document).ready(function () {
 
