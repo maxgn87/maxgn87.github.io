@@ -8,7 +8,7 @@
  setTimeout(function () {
      $('.main-section__right_photo').addClass('man_anim_back')
      $('.main-section__tegs').addClass('back_fly')
- }, 2000);
+ }, 2500);
 
 
 
@@ -69,18 +69,6 @@
  });
 
 
- // $('.window_container_new').click(function (event) {
- //     if (event.target == this) {
- //         $(this).fadeOut(1200);
- //         $('.arrows').show();
- //     }
- //
- // });
-
-
-
-
-
 
  $('.menu_burger').on('click', function (a) {
      $('.menu_burger').addClass('menu_burger__open');
@@ -118,10 +106,6 @@
 
 
 
-
-
-
-
  $('body').on('click', '.more', function () {
 
      $('window_container').show();
@@ -136,18 +120,9 @@
  });
 
 
- // $('.window_container').click(function (event) {
- //     if (event.target == this) {
- //         $(this).fadeOut(1300);
- //     }
- //
- // });
-
-
-
  $('.close_menu').click(function (event) {
 
-     $('.windows').hide();
+     $('.windows').fadeOut(2000);
      event.preventDefault();
 
  });
@@ -160,10 +135,17 @@
              top = $(id).offset().top;
          $('body,html').animate({
              scrollTop: top
-         }, 1500);
-     });
- });
+         }, 2000);
+         $('.header-nav__menu').fadeOut(5000);
+         $('.menu_burger__open').hide(2000);
 
+         setTimeout(function () {
+            $('.menu_burger').removeClass('menu_burger__open')
+            $('.menu_burger').show();
+         }, 2800);
+
+     });
+});
 
  $(document).ready(function () {
 
@@ -173,7 +155,7 @@
 
      $('input[type="email"]').inputmask({
          "mask": "example@mail.com"
-     }) 
+     })
 
  });
 
@@ -201,10 +183,8 @@
                  required: true,
                  number: false,
              },
-
-
          },
-    
+
          submitHandler(form) {
              let th = $(form);
 
@@ -227,26 +207,20 @@
      });
  });
 
-$(document).ready(function () {
+ $(document).ready(function () {
 
-var top_show = 400; 
-  var delay = 1000; 
-  $(document).ready(function() {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > top_show) $('.top_btn').fadeIn();
-      else $('.top_btn').fadeOut();
-    });
-    $('.top_btn').click(function () { 
-      $('body, html').animate({
-        scrollTop: 0
-      }, delay);
-    });
-  });
+     var top_show = 400;
+     var delay = 1000;
+     $(document).ready(function () {
+         $(window).scroll(function () {
+             if ($(this).scrollTop() > top_show) $('.top_btn').fadeIn();
+             else $('.top_btn').fadeOut();
+         });
+         $('.top_btn').click(function () {
+             $('body, html').animate({
+                 scrollTop: 0
+             }, delay);
+         });
+     });
 
-});
-
-
-
-
-
-
+ });
