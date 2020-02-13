@@ -63,7 +63,6 @@
 
      if (wind.css('display') == 'none') {
          (wind).fadeIn(1600);
-         $('.top_btn').hide();
      } else {
          $(wind).hide();
      }
@@ -112,7 +111,6 @@
      $('window_container').show();
 
      var wind = $('.window_container');
-     $('.top_btn').hide();
 
      if (wind.css('display') == 'none') {
          (wind).fadeIn(2000);
@@ -125,7 +123,6 @@
  $('.close_menu').click(function (event) {
 
      $('.windows').fadeOut(2000);
-     $('.top_btn').fadein(2000);
      event.preventDefault();
 
  });

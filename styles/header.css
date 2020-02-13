@@ -14,14 +14,17 @@
     bottom: 85px;
     z-index: 60;
     display: none;
-    width: 45px;
-    height: 45px;
-    background-image: url('../img/up-arrow.png');
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/uparrow5_78514.png');
     background-size: 40px;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: transform .5s ease;
 }
+
+
+
 
 
 
